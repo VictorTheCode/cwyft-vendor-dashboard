@@ -1,4 +1,4 @@
-import { InputHTMLAttributes } from "react";
+import { InputHTMLAttributes, ReactNode } from "react";
 
 interface FormInputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
@@ -30,3 +30,27 @@ export function FormInput({ label, icon, id, ...props }: FormInputProps) {
   );
 }
 
+export function Field({
+  label,
+  error,
+  children,
+}: {
+  label: string;
+  error?: string;
+  children: ReactNode;
+}) {
+  return (
+    <label className="block">
+      <span className="mb-1 block text-xs font-medium text-gray-600">
+        {label}
+      </span>
+      {children}
+      {error && (
+        <span className="mt-1 block text-[11px] text-red-500">{error}</span>
+      )}
+    </label>
+  );
+}
+
+export const inputClass =
+  "h-10 w-full rounded-lg border border-border bg-white px-3 text-sm outline-none placeholder:text-gray-400 focus:border-pink";

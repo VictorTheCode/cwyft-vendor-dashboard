@@ -12,7 +12,8 @@ export function Button({
   children,
   ...props
 }: ButtonProps) {
-  const base = "font-semibold py-3 rounded-lg transition cursor-pointer text-sm";
+  const base =
+    "font-semibold py-3 rounded-lg transition cursor-pointer text-sm";
   const variants = {
     primary: "bg-pink hover:bg-pink-hover text-white",
     outline: "border border-gray-300 text-gray-700 hover:bg-gray-50",
@@ -29,3 +30,8 @@ export function Button({
   );
 }
 
+export const primaryBtn =
+  "rounded-lg bg-pink px-4 py-2.5 text-sm font-medium text-white transition hover:bg-pink/90";
+
+export const secondaryBtn =
+  "rounded-lg border border-border px-4 py-2.5 text-sm font-medium text-gray-600 transition hover:bg-gray-50";

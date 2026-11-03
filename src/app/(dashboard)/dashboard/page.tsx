@@ -1,15 +1,28 @@
+import { Greeting } from "@/components/dashboard/greeting";
+import { PopularItems } from "@/components/dashboard/popular-items";
+import { RecentOrders } from "@/components/dashboard/recent-orders";
+import { SalesOverview } from "@/components/dashboard/sales-overview";
+import { StatCard } from "@/components/dashboard/stat-card";
+import { stats } from "@/constants/dashboard";
+
 export default function DashboardPage() {
   return (
-    <div>
-      <h1 className="text-xl font-semibold text-gray-900">
-        Good morning, David
-      </h1>
-      <p className="text-sm text-gray-500 mt-1">
-        Here&apos;s what&apos;s happening with your store today.
-      </p>
+    <div className="max-w-300 space-y-6">
+      <Greeting name="David" />
 
-      {/* TODO: Stats cards, Recent Orders, Popular Items, Sales Overview */}
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        {stats.map((s) => (
+          <StatCard key={s.label} {...s} />
+        ))}
+      </div>
+
+      <div className="grid grid-cols-1 gap-6 xl:grid-cols-[1fr_320px]">
+        <div className="space-y-6">
+          <RecentOrders />
+          <SalesOverview />
+        </div>
+        <PopularItems />
+      </div>
     </div>
   );
 }
-

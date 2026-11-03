@@ -12,7 +12,7 @@ export function Logo({ width = 100, height = 32 }: LogoProps) {
       alt="Cwyft"
       width={width}
       height={height}
-      style={{ width, height: "auto" }}
+      style={{ width: "auto", height: "auto" }}
       priority
     />
   );
