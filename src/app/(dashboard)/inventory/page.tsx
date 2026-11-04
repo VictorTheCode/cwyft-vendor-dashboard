@@ -15,7 +15,7 @@ import {
   statusOf,
 } from "@/constants/inventory";
 import { StockFilter, StockItem } from "@/types";
-import { useState, type FormEvent } from "react";
+import { useState } from "react";
 
 export default function InventoryPage() {
   const [items, setItems] = useState(initialItems);
@@ -107,7 +107,7 @@ export default function InventoryPage() {
                 return (
                   <tr key={item.id}>
                     <td className="px-4 py-3">
-                      <Thumb />
+                      <Thumb src={item.image} alt={item.name} />
                     </td>
                     <td className="px-4 py-3 font-semibold text-navy">
                       {item.name}

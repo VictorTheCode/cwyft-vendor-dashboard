@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { FormInput } from "@/components/ui/form-input";
 import { Button } from "@/components/ui/button";
-import { MailIcon, MapPinIcon, PhoneIcon } from "@/components/icons";
+import { MailIcon } from "@/components/icons";
 
 export default function SignUpPage() {
   return (
@@ -32,6 +32,15 @@ export default function SignUpPage() {
           Login
         </Button>
       </form>
+
+      {/* temporary login link - removve when real auth is implemented  */}
+
+      <Link
+        href="/dashboard"
+        className="mt-3 block w-full rounded-lg border border-pink py-2.5 text-center text-sm font-medium text-pink transition hover:bg-pink/10"
+      >
+        Continue to demo dashboard
+      </Link>
 
       <p className="text-center text-xs text-gray-400 mt-6">
         Questions?{" "}

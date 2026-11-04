@@ -1,5 +1,5 @@
-import { Sidebar } from "@/components/dashboard/sidebar";
-import { TopBar } from "@/components/dashboard/top-bar";
+import { Sidebar } from "@/components/ui/sidebar";
+import { TopBar } from "@/components/ui/top-bar";
 
 export default function DashboardLayout({
   children,
@@ -7,7 +7,7 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="h-screen flex overflow-hidden bg-surface">
+    <div className="h-dvh flex overflow-hidden bg-surface">
       {/* Sidebar: fixed height, no scroll */}
       <Sidebar />
 

@@ -2,6 +2,7 @@
 
 import { BackLink } from "@/components/dashboard/back-link";
 import { MapPinIcon, PhoneIcon, UserIcon } from "@/components/icons";
+import { Thumb } from "@/components/ui/thumb";
 import { naira, nextStep, orders, statusText } from "@/constants/orders";
 import { OrderStatus } from "@/types";
 import { useParams } from "next/navigation";
@@ -71,8 +72,7 @@ export default function OrderDetailsPage() {
                 key={item.name}
                 className="flex items-center gap-3 text-xs text-gray-700"
               >
-                {/* Swap this placeholder for <Image /> once you have meal photos */}
-                <div className="h-8 w-9 shrink-0 rounded bg-gray-200" />
+                <Thumb src={item.image} alt={item.name} />
                 <span className="flex-1">
                   {item.name} × {item.qty}
                 </span>

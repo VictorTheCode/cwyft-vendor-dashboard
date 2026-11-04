@@ -10,7 +10,7 @@ const orders: Record<string, Order> = {
       phone: "0801 234 5678",
       address: "Student Hostel, Main Campus",
     },
-    items: [{ name: "Shawarma", qty: 2, price: 1750 }],
+    items: [{ name: "Shawarma", qty: 2, price: 1750, image: "/shar.png" }],
     deliveryFee: 0,
   },
   CW1023: {
@@ -22,7 +22,14 @@ const orders: Record<string, Order> = {
       phone: "0802 345 6789",
       address: "Block C, Staff Quarters",
     },
-    items: [{ name: "Jollof rice & Chicken", qty: 1, price: 3500 }],
+    items: [
+      {
+        name: "Jollof rice & Chicken",
+        qty: 1,
+        price: 3500,
+        image: "/jollof.png",
+      },
+    ],
     deliveryFee: 700,
   },
   CW1022: {
@@ -34,7 +41,7 @@ const orders: Record<string, Order> = {
       phone: "0803 456 7890",
       address: "Student Hostel, Main Campus",
     },
-    items: [{ name: "Shawarma", qty: 1, price: 3000 }],
+    items: [{ name: "Shawarma", qty: 1, price: 3000, image: "/shar.png" }],
     deliveryFee: 0,
   },
   CW1021: {
@@ -47,8 +54,8 @@ const orders: Record<string, Order> = {
       address: "Off-campus, Epe Road",
     },
     items: [
-      { name: "Beef Suya", qty: 1, price: 2000 },
-      { name: "Coke & Fanta", qty: 1, price: 800 },
+      { name: "Beef Suya", qty: 1, price: 2000, image: "/beef.png" },
+      { name: "Coke & Fanta", qty: 1, price: 800, image: "/drinks.png" },
     ],
     deliveryFee: 0,
   },
@@ -61,7 +68,7 @@ const orders: Record<string, Order> = {
       phone: "0805 678 9012",
       address: "Female Hostel B",
     },
-    items: [{ name: "Ofada Rice", qty: 2, price: 2750 }],
+    items: [{ name: "Ofada Rice", qty: 2, price: 2750, image: "/ofada.png" }],
     deliveryFee: 0,
   },
 };

@@ -11,7 +11,7 @@ import { Thumb } from "@/components/ui/thumb";
 import { filters, initialItems } from "@/constants/menu";
 import { naira } from "@/lib/format";
 import { MenuFilter, MenuItem } from "@/types";
-import { useState, type FormEvent } from "react";
+import { useState } from "react";
 
 export default function MenuPage() {
   const [items, setItems] = useState(initialItems);
@@ -106,7 +106,7 @@ export default function MenuPage() {
               {visible.map((item) => (
                 <tr key={item.id}>
                   <td className="px-4 py-3">
-                    <Thumb />
+                    <Thumb src={item.image} alt={item.name} />
                   </td>
                   <td className="px-4 py-3 font-semibold text-navy">
                     {item.name}

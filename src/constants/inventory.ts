@@ -9,18 +9,54 @@ const filters: StockFilter[] = [
 ];
 
 const initialItems: StockItem[] = [
-  { id: 1, name: "Rice (1kg)", category: "Rice", stock: 12, lowAt: 5 },
-  { id: 2, name: "Chicken (1kg)", category: "Protein", stock: 8, lowAt: 5 },
-  { id: 3, name: "Shawarma Wrap", category: "Snacks", stock: 15, lowAt: 5 },
+  {
+    id: 1,
+    name: "Rice (1kg)",
+    category: "Rice",
+    stock: 12,
+    lowAt: 5,
+    image: "/rice.png",
+  },
+  {
+    id: 2,
+    name: "Chicken (1kg)",
+    category: "Protein",
+    stock: 8,
+    lowAt: 5,
+    image: "/chicken.png",
+  },
+  {
+    id: 3,
+    name: "Shawarma Wrap",
+    category: "Snacks",
+    stock: 15,
+    lowAt: 5,
+    image: "/wrap.png",
+  },
   {
     id: 4,
     name: "Tomatoes (1tray)",
     category: "Vegetable",
     stock: 5,
     lowAt: 5,
+    image: "/tomato.png",
   },
-  { id: 5, name: "Beef (1kg)", category: "Protein", stock: 10, lowAt: 5 },
-  { id: 6, name: "Water (20pcks)", category: "Drinks", stock: 8, lowAt: 10 },
+  {
+    id: 5,
+    name: "Beef (1kg)",
+    category: "Protein",
+    stock: 10,
+    lowAt: 5,
+    image: "/beef.png",
+  },
+  {
+    id: 6,
+    name: "Water (20pcks)",
+    category: "Drinks",
+    stock: 8,
+    lowAt: 10,
+    image: "/water.png",
+  },
 ];
 
 function statusOf(item: StockItem): Status {
