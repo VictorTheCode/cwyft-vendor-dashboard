@@ -53,10 +53,25 @@ export const recentOrders: RecentOrder[] = [
 
 // Add `image: "/meals/ofada-rice.jpg"` once the photos are in public/meals
 export const popularItems: PopularItem[] = [
-  { name: "Plantain & Egg", orders: 45, revenue: 112000 },
-  { name: "Ofada Rice", orders: 32, revenue: 72000 },
-  { name: "Jollof rice & Chicken", orders: 24, revenue: 135000 },
-  { name: "Fried rice & Chicken", orders: 20, revenue: 50000 },
+  {
+    name: "Plantain & Egg",
+    orders: 45,
+    revenue: 112000,
+    image: "/plantain.png",
+  },
+  { name: "Ofada Rice", orders: 32, revenue: 72000, image: "/ofada.png" },
+  {
+    name: "Jollof rice & Chicken",
+    orders: 24,
+    revenue: 135000,
+    image: "/jollof.png",
+  },
+  {
+    name: "Fried rice & Chicken",
+    orders: 20,
+    revenue: 50000,
+    image: "/fried.png",
+  },
 ];
 
 // The 7-day values add up to ₦185,000, so the chart total matches the stat card

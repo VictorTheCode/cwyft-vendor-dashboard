@@ -12,6 +12,7 @@ const satoshi = localFont({
 export const metadata: Metadata = {
   title: "Cwyft — Vendor Dashboard",
   description: "Manage your restaurant and orders on Cwyft",
+  robots: { index: false, follow: false },
 };
 
 export default function RootLayout({

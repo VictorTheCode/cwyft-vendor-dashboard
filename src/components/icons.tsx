@@ -132,3 +132,30 @@ export const ArrowRightIcon = () => (
     <path d="M5 12h14M12 5l7 7-7 7" />
   </svg>
 );
+
+export const MenuIcon = () => (
+  <svg
+    width="22"
+    height="22"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    viewBox="0 0 24 24"
+  >
+    <path d="M4 6h16M4 12h16M4 18h16" />
+  </svg>
+);
+export const CloseIcon = () => (
+  <svg
+    width="22"
+    height="22"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    viewBox="0 0 24 24"
+  >
+    <path d="M6 6l12 12M18 6L6 18" />
+  </svg>
+);

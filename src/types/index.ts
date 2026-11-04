@@ -24,6 +24,7 @@ export type StockItem = {
   category: string;
   stock: number;
   lowAt: number;
+  image?: string;
 };
 
 export type Category = "Rice" | "Swallow" | "Snacks" | "Drinks";
@@ -34,6 +35,7 @@ export type MenuItem = {
   category: Category;
   price: number;
   available: boolean;
+  image?: string;
 };
 export type OrderStatus =
   | "Pending"
@@ -47,7 +49,7 @@ export type Order = {
   placedAt: string;
   status: OrderStatus;
   customer: { name: string; phone: string; address: string };
-  items: { name: string; qty: number; price: number }[];
+  items: { name: string; qty: number; price: number; image?: string }[];
   deliveryFee: number;
 };
 
