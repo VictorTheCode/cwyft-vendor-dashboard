@@ -8,7 +8,7 @@ interface LogoProps {
 export function Logo({ width = 100, height = 32 }: LogoProps) {
   return (
     <Image
-      src="/CWYFT LOGO WHITE+PINK 2.png"
+      src="/cwyft-logo.png"
       alt="Cwyft"
       width={width}
       height={height}
