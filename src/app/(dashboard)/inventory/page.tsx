@@ -155,9 +155,13 @@ export default function InventoryPage() {
         </div>
       </div>
 
-      <p className="text-[11px] text-gray-500">
-        Showing {visible.length} of {items.length} items
-      </p>
+      <div className="flex items-center justify-between text-[11px] text-gray-500">
+        <span>
+          Showing {visible.length === 0 ? 0 : 1}-{visible.length} of{" "}
+          {items.length} items
+        </span>
+        <span>1</span>
+      </div>
 
       <Modal
         open={formOpen}

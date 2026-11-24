@@ -26,7 +26,7 @@ export function RecentOrders() {
       ) : (
         <div className="overflow-x-auto">
           <table className="w-full min-w-140 text-left text-sm">
-            <thead className="bg-surface text-xs text-gray-500">
+            <thead className="border-b border-border text-xs text-gray-500">
               <tr>
                 {headers.map((h) => (
                   <th key={h} className="px-5 py-3 font-medium">
