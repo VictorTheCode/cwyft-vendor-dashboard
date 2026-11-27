@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   experimental: {
     cpus: 2,
   },
+  allowedDevOrigins: ["192.168.1.165"],
   turbopack: {
     rules: {
       "*.css": {
