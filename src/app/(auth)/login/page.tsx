@@ -75,12 +75,26 @@ export default function LoginPage() {
           Continue to demo dashboard
         </Link>
 
-        <div className="mt-4 text-center">
+        <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-xs">
           <Link
             href="/verification"
-            className="text-xs font-medium text-[#001D39]/70 hover:text-pink hover:underline"
+            className="font-medium text-[#001D39]/70 hover:text-pink hover:underline"
           >
-            Complete Business Verification →
+            Business Verification
+          </Link>
+          <span className="text-gray-300">•</span>
+          <Link
+            href="/admin/login"
+            className="font-medium text-[#001D39]/70 hover:text-pink hover:underline"
+          >
+            Admin Portal
+          </Link>
+          <span className="text-gray-300">•</span>
+          <Link
+            href="/rider/login"
+            className="font-medium text-[#001D39]/70 hover:text-pink hover:underline"
+          >
+            Rider Portal
           </Link>
         </div>
       </div>
