@@ -2,6 +2,7 @@
 
 import { Range } from "@/types";
 import { useState } from "react";
+import { Calendar } from "lucide-react";
 import {
   niceTop,
   naira,
@@ -12,8 +13,15 @@ import {
   topItems,
 } from "@/constants/analytics";
 
+const periodToRange: Record<string, Range> = {
+  "Last 7 Days": "Week",
+  "Last 30 Days": "Month",
+  "This Year": "Year",
+};
+
 export default function AnalyticsPage() {
   const [range, setRange] = useState<Range>("Week");
+  const [period, setPeriod] = useState("Last 7 Days");
   const { labels, values, delta } = ranges[range];
   const total = values.reduce((a, b) => a + b, 0);
   const statusTotal = statusBreakdown.reduce((a, s) => a + s.value, 0);
@@ -28,11 +36,22 @@ export default function AnalyticsPage() {
             business
           </p>
         </div>
-        <select className="h-10 rounded-lg border border-border bg-white px-3 text-xs text-navy outline-none focus:border-pink">
-          <option>Last 7 Days</option>
-          <option>Last 30 Days</option>
-          <option>This Year</option>
-        </select>
+        <div className="relative self-start">
+          <Calendar className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-navy" />
+          <select
+            value={period}
+            onChange={(e) => {
+              setPeriod(e.target.value);
+              setRange(periodToRange[e.target.value] ?? "Week");
+            }}
+            aria-label="Select analytics period"
+            className="h-10 rounded-lg border border-border bg-white pl-9 pr-4 text-xs text-navy outline-none focus:border-pink cursor-pointer"
+          >
+            <option>Last 7 Days</option>
+            <option>Last 30 Days</option>
+            <option>This Year</option>
+          </select>
+        </div>
       </div>
 
       <div className="grid grid-cols-2 gap-4 xl:grid-cols-4">

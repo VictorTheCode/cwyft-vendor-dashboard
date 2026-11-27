@@ -10,7 +10,7 @@ export function Notifications() {
     newOrders: false,
     orderUpdates: false,
     payouts: false,
-    promos: true,
+    promos: false,
   });
 
   return (

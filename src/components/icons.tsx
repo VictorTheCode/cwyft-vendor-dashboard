@@ -70,6 +70,22 @@ export const UserIcon = () => (
   </svg>
 );
 
+export const StoreIcon = () => (
+  <svg {...iconProps}>
+    <path d="M3 9l1.5-5h15L21 9" />
+    <path d="M3 9a2 2 0 004 0 2 2 0 004 0 2 2 0 004 0 2 2 0 004 0" />
+    <path d="M5 11v9h14v-9" />
+    <path d="M9 20v-6h6v6" />
+  </svg>
+);
+
+export const LockIcon = () => (
+  <svg {...iconProps}>
+    <rect x="4" y="11" width="16" height="10" rx="2" />
+    <path d="M8 11V7a4 4 0 018 0v4" />
+  </svg>
+);
+
 export const PencilIcon = () => (
   <svg
     width="16"

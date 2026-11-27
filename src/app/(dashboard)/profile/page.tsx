@@ -8,7 +8,7 @@ export default function BusinessProfilePage() {
     <div className="space-y-8">
       <div>
         <h1 className="text-lg font-semibold text-navy">Business Profile</h1>
-        <p className="mt-0.5 text-base text-navy">
+        <p className="mt-0.5 text-xs text-navy">
           Manage your restaurant information and business details
         </p>
       </div>
